@@ -1,0 +1,19 @@
+// ges-personal.idl
+// tipos de id: cc,ti,pp
+module sop_corba{
+    interface GestionPersonal{
+
+    struct personalDTO{
+    string tipo_id;
+    long id;
+    string nombreCompleto;
+    string ocupacion;
+    string usuario;
+    string clave;
+    
+};
+
+ void registrarPersonal(in personalDTO objPersonal, out boolean res);
+ boolean consultarPersonal(in long id,out personalDTO objPersonal);
+ };
+};
